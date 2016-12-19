@@ -1,4 +1,6 @@
-
+var translate = function(english) {
+  return english;
+}
 
 $(document).ready(function() {
   $("form#pig-latin").submit(function(event) {
