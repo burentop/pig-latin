@@ -1,5 +1,10 @@
 var translate = function(english) {
-  return english;
+  var first = english[0];
+  if (parseInt(first)) {
+    return english;
+  } else {
+    return english + "ay";
+  }
 }
 
 $(document).ready(function() {
