@@ -1,21 +1,26 @@
 var vowels = ['a', 'e', 'i', 'o', 'u'];
+var match = false;
 
 var isVowel = function(letter) {
   vowels.forEach(function(vowel) {
+    console.log(vowel === letter);
     if (vowel === letter) {
-      return true;
+      match = true;
     }
   });
-  return false;
 }
 
 var translate = function(english) {
   var first = english[0];
+  isVowel(first);
   if (parseInt(first)) {
+    match = false;
     return english;
-  } else if (!isVowel(first)) {
+  } else if (!match) {
+    match = false;
     return english.slice(1) + first + "ay";
   } else {
+    match = false;
     return english + "ay";
   }
 }
