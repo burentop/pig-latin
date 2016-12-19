@@ -1,27 +1,42 @@
-# _leap-year_
+# _pig-latin_
 
-#### _Simple web page to practice to determine if a year is a leap year, 12.19.2016_
+#### _Simple web page to turn English into Pig Latin, 12.19.2016_
 
 #### By _**Brent Perry**_
 
 ## Description
 
-_This is a very simple website used to show if a year input is a leap year._
+_This is a very simple website used to translate English into Pig Latin._
 
 # Specs
 
-* _A year that is not a leap year._
-  * _Input Example: 1993_
-  * _Output Example: false_
-* _A year that is divisible by 4._
-  * _Input Example: 2004_
-  * _Output Example: true_
-* _A year that is divisible by 100._
-  * _Input Example: 1900_
-  * _Output Example: false_
-* _A year that is divisible by 400._
-  * _Input Example: 2000_
-  * _Output Example: true_
+* _Do nothing to non-alphabetical character._
+  * _Input Example: 3_
+  * _Output Example: 3_
+* _A single vowel word._
+  * _Input Example: i_
+  * _Output Example: iay_
+* _Word that begins with a consonant._
+  * _Input Example: cat_
+  * _Output Example: atcay_
+* _Word that begins with a vowel._
+  * _Input Example: attic_
+  * _Output Example: atticay_
+* _Word that begins with 2 consonants._
+  * _Input Example: chair_
+  * _Output Example: airchay_
+* _Word that begins with 3 consonants._
+  * _Input Example: stretch_
+  * _Output Example: etchstray _
+* _Word with 'u' after first consonant._
+  * _Input Example: quiet_
+  * _Output Example: ietquay _
+* _Word with 'u' that follows more than one consonant._
+  * _Input Example: squeal_
+  * _Output Example: ealsquay_
+* _A multi-word phrase._
+  * _Input Example: quiet squeal_
+  * _Output Example: ietquay ealsquay_ 
 
 ## Setup/Installation Requirements
 
