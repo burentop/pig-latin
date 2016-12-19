@@ -1,4 +1,4 @@
-var vowels = ['a', 'e', 'i', 'o', 'u'];
+var vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
 var inputWords = [];
 var outputWords = [];
 
@@ -17,25 +17,13 @@ var isVowel = function(letter) {
   return false;
 }
 
-var findFirstVowel = function(word) {
-  for (var index = 0; index < word.length; index += 1) {
-    if (isVowel(word[index])) {
-      if (word[index] === 'u' && isVowel(word[index + 1])) {
-        return index + 1;
-      }
-      return index;
-    }
-  }
-  return -1;
-}
-
 var translate = function(english) {
   var first = english[0];
   isVowel(first);
   if (parseInt(first)) {
     return english;
   } else if (!isVowel(first)) {
-    var vowelLoc = findFirstVowel(english);
+    var vowelLoc = english.search(/[aeiou]/i);
     return english.slice(vowelLoc) + english.slice(0, vowelLoc) + "ay";
   } else {
     return english + "ay";
