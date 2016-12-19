@@ -1,4 +1,12 @@
 var vowels = ['a', 'e', 'i', 'o', 'u'];
+var inputWords = [];
+var outputWords = [];
+
+var generateOutput = function() {
+  for (var index = 0; index < inputWords.length; index += 1) {
+    outputWords.push(translate(inputWords[index]));
+  }
+}
 
 var isVowel = function(letter) {
   for (var index = 0; index < vowels.length; index += 1) {
@@ -38,7 +46,9 @@ $(document).ready(function() {
   $("form#pig-latin").submit(function(event) {
     event.preventDefault();
     var english = $("input#english").val();
-    var result = translate(english);
+    inputWords = english.split(" ");
+    generateOutput();
+    var result = outputWords.join(" ");
     $("#result").text(result);
 
     $("#result").show();
