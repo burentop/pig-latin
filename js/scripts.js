@@ -12,6 +12,9 @@ var isVowel = function(letter) {
 var findFirstVowel = function(word) {
   for (var index = 0; index < word.length; index += 1) {
     if (isVowel(word[index])) {
+      if (word[index] === 'u' && isVowel(word[index + 1])) {
+        return index + 1;
+      }
       return index;
     }
   }
