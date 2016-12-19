@@ -49,8 +49,8 @@ $(document).ready(function() {
     inputWords = english.split(" ");
     generateOutput();
     var result = outputWords.join(" ");
-    $("#result").text(result);
-
+    $("#output-english").text(english);
+    $("#output-pig").text(result);
     $("#result").show();
   });
 });
